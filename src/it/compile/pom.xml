@@ -65,6 +65,7 @@
           <removeDuplicateFunctions>false</removeDuplicateFunctions>
           <saveSource>true</saveSource>
           <saveSourceOutput>${project.build.directory}/savedSources</saveSourceOutput>
+          <disableUpdateCheck>true</disableUpdateCheck>
         </configuration>
         <executions>
           <execution>

@@ -334,6 +334,14 @@ public class CompileMojo
      */
     private String sourceLevel;
 
+    /**
+     * EXPERIMENTAL: Disabling update checks.
+     *
+     * @parameter default-value="true" expression="${gwt.compiler.disableUpdateCheck}"
+     * @since 2.6.0-rc2
+     */
+    private boolean disableUpdateCheck;
+
     public void doExecute( )
         throws MojoExecutionException, MojoFailureException
     {
@@ -396,6 +404,7 @@ public class CompileMojo
             .arg( !removeDuplicateFunctions, "-XnoremoveDuplicateFunctions" )
             .arg( saveSource, "-saveSource" )
             .arg( "-sourceLevel", sourceLevel )
+            .arg(disableUpdateCheck, "-XdisableUpdateCheck")
         ;
 
         if ( saveSourceOutput != null )

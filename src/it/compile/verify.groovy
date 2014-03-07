@@ -51,5 +51,6 @@ assert content.contains( '-XnooptimizeDataflow' );
 assert content.contains( '-XnoordinalizeEnums' );
 assert content.contains( '-XnoremoveDuplicateFunctions' );
 assert content.contains( '-sourceLevel auto' );
+assert content.contains( '-XdisableUpdateCheck' );
   
 return true;
